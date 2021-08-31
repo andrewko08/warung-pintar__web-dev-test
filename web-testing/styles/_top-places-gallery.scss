@@ -1,0 +1,83 @@
+@import "./variables";
+@import "./mixins";
+
+.top-places-gallery {
+  h1 {
+    color: black;
+    margin: $title-margin;
+    position: relative;
+
+    &:before {
+      content: "";
+      height: 2px;
+      width: 28%;
+      background: rgb(99, 156, 175);
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+    }
+  }
+
+  .even-gallery {
+    @include flexCenter(row);
+
+    .square-gallery-container {
+      position: relative;
+      height: 500px;
+      width: 500px;
+      min-width: 400px;
+      min-height: 400px;
+      margin: 5px;
+
+      @include heroBanner(url("../assets/hero-images.png"));
+
+      .content-container {
+        position: absolute;
+        bottom: 0;
+        @include flexCenter(row);
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        background: rgba(39, 39, 39, 0.6);
+        width: 100%;
+
+        .square-gallery-title {
+          padding: 20px;
+        }
+
+        .square-gallery-two-icons {
+          padding: 20px;
+          @include flexStart(row);
+          align-items: center;
+
+          p {
+            margin-right: 5px;
+          }
+          img {
+            width: 25px;
+            height: auto;
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 800px) {
+  .top-places-gallery {
+    .even-gallery {
+      @include flexCenter(row);
+
+      .square-gallery-container {
+        position: relative;
+        height: 500px;
+        width: 500px;
+        min-width: 300px;
+        min-height: 300px;
+        max-width: 300px;
+        max-height: 300px;
+        margin: 5px;
+      }
+    }
+  }
+}

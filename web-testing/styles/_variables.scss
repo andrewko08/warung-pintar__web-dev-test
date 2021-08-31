@@ -1,0 +1,51 @@
+$textColor: white;
+$mobile-margin: 100px auto;
+$title-margin: 80px 40px 40px 0px;
+
+@font-face {
+  font-family: Montserrat-Medium;
+  src: url("../fonts/Montserrat/Montserrat-Medium.ttf");
+}
+
+@font-face {
+  font-family: Montserrat-Bold;
+  src: url("../fonts/Montserrat/Montserrat-Bold.ttf");
+}
+
+@font-face {
+  font-family: Montserrat-Regular;
+  src: url("../fonts/Montserrat/Montserrat-Regular.ttf");
+}
+
+h1 {
+  font-size: 44px;
+  color: $textColor;
+  font-family: Montserrat-Bold;
+}
+
+h2 {
+  font-size: 52px;
+  font-family: Montserrat-Bold;
+}
+
+p {
+  font-size: 30px;
+  color: $textColor;
+  font-family: Montserrat-Regular;
+}
+
+@media all and (max-width: 800px) {
+  body {
+    h1 {
+      font-size: 30px;
+    }
+
+    h2 {
+      font-size: 38px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+}

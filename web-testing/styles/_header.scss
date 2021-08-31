@@ -1,0 +1,39 @@
+@import "./variables";
+@import "./mixins";
+
+header {
+  @include flexStart(column);
+  @include heroBanner(url("../assets/hero-images.png"));
+
+  color: $textColor;
+  height: auto;
+  min-height: 95vh;
+
+  h1,
+  p {
+    padding: 2vh 4vh;
+  }
+
+  img {
+    padding: 0vh 4vh 7vh 4vh;
+  }
+
+  .banner-wrapper {
+    width: 50%;
+  }
+}
+
+@media all and (max-width: 1500px) {
+  header {
+    min-height: 0vh;
+
+    img {
+      width: 150px;
+      height: auto;
+    }
+    .banner-wrapper {
+      width: 100%;
+      margin: $mobile-margin;
+    }
+  }
+}

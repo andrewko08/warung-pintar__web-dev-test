@@ -1,0 +1,22 @@
+@import "./header";
+@import "./variables";
+@import "./benefits-banner";
+@import "./mixins";
+@import "./inspired-gallery";
+@import "./top-places-gallery";
+@import "./footer";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.padded {
+  padding: 100px;
+}
+
+@media all and (max-width: 800px) {
+  .padded {
+    padding: 20px;
+  }
+}

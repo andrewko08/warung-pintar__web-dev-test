@@ -1,0 +1,14 @@
+@import "./variables";
+@import "./mixins";
+
+.footer {
+  @include flexCenter(column);
+  width: 100%;
+  background-color: rgb(29, 34, 78);
+  height: 120px;
+  margin-top: 70px;
+  img {
+    height: 40px;
+    width: auto;
+  }
+}

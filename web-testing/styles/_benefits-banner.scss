@@ -1,0 +1,79 @@
+@import "./variables";
+@import "./mixins";
+
+.benefits-banner {
+  margin: -200px 8vh 8vh 8vh;
+  height: auto;
+  background-color: white;
+  box-shadow: 0 3px 10px rgb(0, 0, 0);
+
+  .benefits-banner__content-wrapper {
+    @include flexStart(column);
+
+    padding: 100px;
+
+    h1,
+    p {
+      color: black;
+    }
+
+    h1 {
+      margin-bottom: 50px;
+    }
+
+    .cards-container {
+      @include flexCenter(row);
+
+      .cards-wrapper__content {
+        width: 33%;
+
+        .cards-content-title {
+          font-family: Montserrat-Medium;
+        }
+        img,
+        p {
+          padding: 20px 20px 20px 0px;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 1550px) {
+  .benefits-banner {
+    margin: 80px 8vh 8vh 8vh;
+
+    .benefits-banner__content-wrapper {
+      padding: 40px;
+
+      .cards-container {
+        .cards-wrapper__content {
+          margin-bottom: 30px;
+          img {
+            width: 80px;
+            height: auto;
+          }
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 800px) {
+  .benefits-banner {
+    .benefits-banner__content-wrapper {
+      padding: 40px;
+      .cards-container {
+        .cards-wrapper__content {
+          margin-bottom: 30px;
+          img {
+            width: 80px;
+            height: auto;
+          }
+          width: 100%;
+        }
+      }
+    }
+  }
+}
